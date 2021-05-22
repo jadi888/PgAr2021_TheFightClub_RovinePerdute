@@ -1,5 +1,4 @@
 package RovinePerdute.unibs.it;
-import java.*;
 import java.util.*;
 
 public class Citta {
@@ -9,7 +8,7 @@ public class Citta {
     private int H;
     private String Nome;
     private int ID;
-    private LinkedHashMap<String, Integer> CollegamentoCon = new LinkedHashMap<>();
+    private LinkedList<Integer> collegatoCon = new LinkedList<>();
 
     public Citta(int x, int y, int h, String nome, int id){
         this.X = x;
@@ -17,6 +16,9 @@ public class Citta {
         this.H = h;
         this.Nome = nome;
         this.ID = id;
+    }
+
+    public Citta(){
     }
 
     public void setX(int x){
@@ -39,9 +41,12 @@ public class Citta {
         this.ID = ID;
     }
 
-    public void setCollegamentoCon(LinkedHashMap<String, Integer> collegamentoCon){
-        this.CollegamentoCon = collegamentoCon;
+    public LinkedList<Integer> getCollegatoCon() {
+        return collegatoCon;
+    }
 
+    public void setCollegatoCon(LinkedList<Integer> collegatoCon) {
+        this.collegatoCon = collegatoCon;
     }
 
     public int getX() {
@@ -64,14 +69,12 @@ public class Citta {
         return ID;
     }
 
-    public LinkedHashMap<String, Integer> getCollegamentoCon() {
-        return CollegamentoCon;
-    }
+
 
     @Override
     public String toString() {
         return "Citta{" + "X=" + X + ", Y=" + Y + ", H=" + H + ", Nome='" + Nome + '\'' + ", ID=" + ID +
-                ", collegato con" + CollegamentoCon +
+                ", collegato con" +
                 '}';
     }
 
