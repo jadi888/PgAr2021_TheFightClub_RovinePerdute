@@ -93,14 +93,15 @@ public class LeggiDati {
 
 
           public void matAdiacenza(){
-          matAdj= new int[][];
+          matAdj= new int[citta.size()][citta.size()];
             for(int i=0; i < citta.size()-1; i++){
                 for(int j=0; j < citta.size()-1; j++){
-                    matAdj[i][j] =
+                    matAdj[i][j] = citta
 
                 }
             }
           }
+
 
 
         }

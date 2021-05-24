@@ -78,6 +78,9 @@ public class Citta {
         double y = this.getY() - citta2.getY();
         return Math.sqrt(Math.pow(x, 2) + Math.pow(y, 2));
     }
+    public double distMetzli(Citta citta2){
+        return this.getH() - citta2.getH();
+    }
 
     public int altitudine (int a, int b) {
          int altitudine =0;
