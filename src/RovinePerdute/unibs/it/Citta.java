@@ -48,6 +48,9 @@ public class Citta {
     public void setCollegatoCon(LinkedList<Integer> collegatoCon) {
         this.collegatoCon = collegatoCon;
     }
+    public void addDestinazione(int dest){
+        this.collegatoCon.add(dest);
+    }
 
     public int getX() {
         return X;
