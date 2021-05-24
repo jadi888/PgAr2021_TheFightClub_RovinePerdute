@@ -82,13 +82,6 @@ public class Citta {
         return this.getH() - citta2.getH();
     }
 
-    public int altitudine (int a, int b) {
-         int altitudine =0;
-         altitudine = b - a;
-
-         return altitudine;
-    }
-
 
 
 
