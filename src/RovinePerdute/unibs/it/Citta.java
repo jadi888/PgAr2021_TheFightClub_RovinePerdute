@@ -72,6 +72,11 @@ public class Citta {
         return ID;
     }
 
+    public double distTonatiuh(Citta citta2){
+        double x = this.getX() - citta2.getX();
+        double y = this.getY() - citta2.getY();
+        return Math.sqrt(Math.pow(x, 2) + Math.pow(y, 2));
+    }
 
 
     @Override
@@ -80,6 +85,7 @@ public class Citta {
                 ", collegato con" +
                 '}';
     }
+
 
 
 }

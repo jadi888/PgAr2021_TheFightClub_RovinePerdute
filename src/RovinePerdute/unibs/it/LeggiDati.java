@@ -12,7 +12,7 @@ public class LeggiDati {
     private Citta cittaBase;
     private Citta cittaPerduta;
 
-    public void leggiDati(){
+    public ArrayList<Citta> leggiDati(){
             citta = new ArrayList<>();
             XMLInputFactory xmlif = null;
             XMLStreamReader xmlr = null;
@@ -31,9 +31,6 @@ public class LeggiDati {
                 Citta city = new Citta();
                 while (xmlr.hasNext()) {
                     switch (xmlr.getEventType()) {
-                        case XMLStreamConstants.END_ELEMENT:
-                            //elementoAttuale = "";
-                            break;
                         case XMLStreamConstants.START_ELEMENT:
 
                             tag = xmlr.getLocalName();
@@ -68,7 +65,6 @@ public class LeggiDati {
                                     break;
                             }
                             break;
-                            case
                         case XMLStreamConstants.END_ELEMENT:
                             if(xmlr.getLocalName().contentEquals("city")) {
                                 citta.add(city);
@@ -78,9 +74,7 @@ public class LeggiDati {
 
                         default:
                             break;
-
                     }
-
                     xmlr.next();
                 }
             }
@@ -88,7 +82,15 @@ public class LeggiDati {
                 System.out.println("Errore nella lettura dei Nodi:");
                 System.out.println(e.getMessage());
             }
+            return citta;
           }
+
+          public LeggiDati(){
+            cittaBase = citta.get(0);
+            cittaPerduta = citta.get(citta.size()-1);
+          }
+
+
         }
 
 
