@@ -11,6 +11,7 @@ public class LeggiDati {
     private ArrayList<Citta> citta;
     private Citta cittaBase;
     private Citta cittaPerduta;
+    private int matAdj[][];
 
     public ArrayList<Citta> leggiDati(){
             citta = new ArrayList<>();
@@ -88,6 +89,17 @@ public class LeggiDati {
           public LeggiDati(){
             cittaBase = citta.get(0);
             cittaPerduta = citta.get(citta.size()-1);
+          }
+
+
+          public void matAdiacenza(){
+          matAdj= new int[][];
+            for(int i=0; i < citta.size()-1; i++){
+                for(int j=0; j < citta.size()-1; j++){
+                    matAdj[i][j] =
+
+                }
+            }
           }
 
 
