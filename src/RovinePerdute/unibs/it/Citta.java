@@ -1,5 +1,6 @@
 package RovinePerdute.unibs.it;
-import java.util.*;
+import java.*;
+import java.util.LinkedList;
 
 public class Citta {
 
@@ -78,6 +79,13 @@ public class Citta {
         return Math.sqrt(Math.pow(x, 2) + Math.pow(y, 2));
     }
 
+    public int altitudine (int a, int b) {
+         int altitudine =0;
+         altitudine = b - a;
+
+         return altitudine;
+    }
+
 
     @Override
     public String toString() {
@@ -86,6 +94,4 @@ public class Citta {
                 '}';
     }
 
-
-
-}
+    }
